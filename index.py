@@ -37,4 +37,4 @@ def cner():
         return "Error! http "
 
 if __name__ == "__main__":
-    app.run(debug=false,host='0.0.0.0')#run flask app
+    app.run(host='0.0.0.0')#run flask app
