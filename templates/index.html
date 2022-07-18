@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" style="margin-top:55px;">
+    <h2 class="welcome_txt" style="margin-top:30px; margin-bottom:30px; color: #eef1ef;">Welcome to Complex Named Entity Recognizer !</h2>
+        <h5 class="welcome_txt_sub" style="color: #eef1ef;display: inline;vertical-align: top;">You can recognize these named entities in your paragraph :</h5>
+        <span class="badge bg-primary">Person</span>
+        <span class="badge bg-success">Organization</span>
+        <span class="badge bg-danger">Date & Time</span>
+        <span class="badge bg-warning">Creative Work</span>
+        <span class="badge bg-info">Country</span>
+        <span class="badge bg-dark">Currency</span>
+    <div class="row">
+
+        <div class="mainleftcol col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="margin-top:30px;background-color: #A9B4C2;">
+            <form action="cner" method="post">
+    
+                <div class="mb-3 mt-3">
+                    <label for="uname" class="form-label"><b>Enter Your Text or Paragraph here :</b></label>
+                    <textarea class="form-control" rows="10" id="comment" placeholder="Enter your text or Paragraph" name="name" required></textarea>
+                    
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+                <input type="submit" value="submit" class="btn btn-primary mb-3">
+            
+            </form>
+        </div>
+        <div class="mainrightcol col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="margin-top:30px;background-color:#7d98a1; padding-bottom: 20px;">
+            <h4 class="mb-3 mt-3" style="color:white;">Here is your output :</h4>
+            {{content | safe}}
+
+        </div>   
+
+    </div>
+     
+</div>
+
+{% endblock %}

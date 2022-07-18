@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}C-NER{% endblock %}</title>
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<link href="{{ url_for('static', filename='main.css')}}" type="text/css" rel="stylesheet"/>
+
+</head>
+<body style="background-color:  #5e6572;">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/">C-NER</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" href="./">Home</a>
+                </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./aboutus">About US</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./help">Help</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+    {% block content %}
+    {% endblock %}
+    <div class="mt-5 p-4 bg-dark text-white text-center">
+        <h6>CNER - Complex Named Entity Recognition</h6>
+        <p> All Rights Recived by Hasani Dilhari <br>(Hasani - 2018090)</p>
+      </div>
+</body>
+</html>
